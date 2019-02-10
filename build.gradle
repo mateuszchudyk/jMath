@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+group 'pl.mateuszchudyk'
+version '1.0.0'
+
+compileJava {
+    options.compilerArgs << "-Xlint" << "-Xlint:-serial"
+}
