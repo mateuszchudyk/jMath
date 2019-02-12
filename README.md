@@ -11,6 +11,8 @@
   - Support for custom function and operators.
   - Functions can be overloaded (resolver chooses function by number of arguments).
   - Functions can takes variable number of arguments (variadic functions).
+  - Expressions can be optimized by optimization passes.
+  - Support for custom optimization passes.
 
 Library contains set of built-in:
   - Constants:
@@ -28,6 +30,8 @@ Library contains set of built-in:
     - random: `rand` (uniform), `nrand` (normal),
     - conversion: `to_degrees`, `to_radians`, `to_logical`
     - compound: `gcd`, `lcm`, `factorial`, `fib`, `lagrange`, `poly`
+  - Optimization passes:
+    - ConstantFolding
 
 ## Built-in operators
 
@@ -96,6 +100,12 @@ Library contains set of built-in:
 | to_degrees | To_Degrees(x) = convert x from radian to degrees | n = 1 |
 | to_logical | To_Logical(x) = if x < 1 then 0 else 1 | n = 1 |
 | to_radians | To_Radians(x) = convert x from degrees to radians | n = 1 |
+
+## Built-in optimization passes
+
+| Name | Description |
+|---|---|
+| ConstantFolding | Fold `AST` subtree to constant if it contains only constans |
 
 ## License
 

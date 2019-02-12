@@ -41,6 +41,7 @@ public class Optimizer {
         passes = new ArrayList<>();
 
         if (type == OptimizerType.Default) {
+            addPass(new pl.mateuszchudyk.jmath.optimizations.ConstantFolding());
         }
     }
 
