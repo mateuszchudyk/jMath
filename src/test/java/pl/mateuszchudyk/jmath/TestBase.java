@@ -24,30 +24,39 @@
 
 package pl.mateuszchudyk.jmath;
 
-import java.util.Arrays;
-
-import pl.mateuszchudyk.jmath.Operation;
-import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
-
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import static org.junit.Assert.fail;
 
 /**
  * @author Mateusz Chudyk
  */
-public abstract class OperationTest extends TestBase {
-    public void evaluateCheck(Double expected, Double... input) {
-        Operation operation = (Operation)createOperationInstance();
+public abstract class TestBase  {
+    private Constructor<?> constructor = null;
 
+    public TestBase() {
         try {
-            assertEquals("Input = " + Arrays.toString(input), expected, operation.evaluate(input));
+            String className = getClass().getName();
+            className = className.substring(0, className.length() - 4);
+            Class<?> functionClass = Class.forName(className);
+            constructor = functionClass.getConstructor();
         }
-        catch (EvaluationException ex) {
-            fail();
+        catch (ClassNotFoundException | NoSuchMethodException | SecurityException ex) {
+            constructor = null;
         }
     }
 
-    @Test
-    public abstract void evaluateTest();
+    protected Object createOperationInstance() {
+        if (constructor == null)
+            return null;
+
+        try {
+            return constructor.newInstance();
+        }
+        catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+            fail("Cannot create instance of class!");
+        }
+
+        return null;
+    }
 }

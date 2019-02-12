@@ -24,48 +24,18 @@
 
 package pl.mateuszchudyk.jmath.optimizations;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
+import pl.mateuszchudyk.jmath.TestBase;
 
 import pl.mateuszchudyk.jmath.ast.ASTExpression;
 import pl.mateuszchudyk.jmath.optimizations.OptimizationPass;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 /**
  * @author Mateusz Chudyk
  */
-public abstract class OptimizationPassTest  {
-    private Constructor<?> constructor = null;
-
-    public OptimizationPassTest() {
-        try {
-            String className = getClass().getName();
-            className = className.substring(0, className.length() - 4);
-            Class<?> functionClass = Class.forName(className);
-            constructor = functionClass.getConstructor();
-        }
-        catch (ClassNotFoundException | NoSuchMethodException | SecurityException ex) {
-            constructor = null;
-        }
-    }
-
-    protected Object createOperationInstance() {
-        if (constructor == null)
-            return null;
-
-        try {
-            return constructor.newInstance();
-        }
-        catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
-            fail("Cannot create instance of class!");
-        }
-
-        return null;
-    }
-
+public abstract class OptimizationPassTest extends TestBase {
     public void runCheck(ASTExpression expected, ASTExpression input) {
         OptimizationPass pass = (OptimizationPass)createOperationInstance();
 
