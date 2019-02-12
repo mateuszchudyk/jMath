@@ -31,6 +31,7 @@ Library contains set of built-in:
     - conversion: `to_degrees`, `to_radians`, `to_logical`
     - compound: `gcd`, `lcm`, `factorial`, `fib`, `lagrange`, `poly`
   - Optimization passes:
+    - BinaryOperatorSimplifying
     - ConstantFolding
 
 ## Built-in operators
@@ -105,6 +106,7 @@ Library contains set of built-in:
 
 | Name | Description |
 |---|---|
+| BinaryOperatorSimplifying | Simplify a binary operator if it's possible, e.g.: `x + 0 = x` or `x^1 = x`|
 | ConstantFolding | Fold `AST` subtree to constant if it contains only constans |
 
 ## License
