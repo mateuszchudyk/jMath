@@ -41,6 +41,10 @@ public class Expression {
         this.substitutions = new HashMap<>();
     }
 
+    protected ASTExpression getAST() {
+        return ast;
+    }
+
     /**
      * Set value of the given variable.
      * @param name Variable name.
