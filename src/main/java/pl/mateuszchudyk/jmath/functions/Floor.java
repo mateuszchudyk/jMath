@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Floor. Return the largest integer lower then x.
- * @author Mateusz Chudyk
  */
 public class Floor implements Function {
     @Override

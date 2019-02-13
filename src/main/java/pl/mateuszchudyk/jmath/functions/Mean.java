@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * The larger of the numbers.
- * @author Mateusz Chudyk
  */
 public class Mean implements Function {
     @Override

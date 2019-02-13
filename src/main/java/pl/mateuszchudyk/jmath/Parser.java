@@ -43,9 +43,6 @@ import pl.mateuszchudyk.jmath.operators.AssociativeType;
 import pl.mateuszchudyk.jmath.operators.Operator;
 import pl.mateuszchudyk.jmath.operators.OperatorType;
 
-/**
- * @author Mateusz Chudyk
- */
 public final class Parser {
     private final Map<TokenType, List<TokenType>> rules;
     private final Map<String, Constant> constants;

@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath.exceptions;
 
-/**
- * @author Mateusz Chudyk
- */
 public class EvaluationException extends MathException {
     public EvaluationException() {
         super("Evaluation Exception!");

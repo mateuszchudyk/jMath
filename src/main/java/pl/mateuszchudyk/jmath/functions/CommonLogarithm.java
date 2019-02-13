@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Common logarithm of x, x in (0, +inf).
- * @author Mateusz Chudyk
  */
 public class CommonLogarithm implements Function {
     @Override

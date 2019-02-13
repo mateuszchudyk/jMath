@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.functions;
 
 import pl.mateuszchudyk.jmath.Operation;
 
-/**
- * @author Mateusz Chudyk
- */
 public interface Function extends Operation {
     /**
      * Check if the number of arguments is correct.

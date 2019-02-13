@@ -27,9 +27,6 @@ package pl.mateuszchudyk.jmath.ast;
 import java.util.Map;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class ASTImmidiateValue implements ASTExpression {
     private final Double value;
 

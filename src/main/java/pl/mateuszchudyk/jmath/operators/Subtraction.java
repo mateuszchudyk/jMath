@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class Subtraction implements Operator {
     @Override
     public String getName() {

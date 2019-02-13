@@ -30,7 +30,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Takes two parameters: mean, stddev. Return the random number with a normal distribution (stddev in (0, +inf)).
- * @author Mateusz Chudyk
  */
 public class NormalDistributionRandom_2 implements Function {
     private Random random;

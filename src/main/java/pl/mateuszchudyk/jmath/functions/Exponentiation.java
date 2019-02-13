@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Takes two parameters: a, b. Return a to the power b. If |b| < 1 then a in [0, +inf) else a is any real number.
- * @author Mateusz Chudyk
  */
 public class Exponentiation implements Function {
     @Override

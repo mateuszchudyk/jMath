@@ -30,7 +30,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Factorial of n (n in {0, 1, 2, ...}).
- * @author Mateusz Chudyk
  */
 public class Factorial implements Function {
     private HashMap<Integer, Double> lut;

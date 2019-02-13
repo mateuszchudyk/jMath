@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Convert radian to degrees.
- * @author Mateusz Chudyk
  */
 public class ToDegrees implements Function {
     @Override

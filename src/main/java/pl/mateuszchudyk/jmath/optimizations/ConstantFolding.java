@@ -30,9 +30,6 @@ import pl.mateuszchudyk.jmath.ast.ASTOperation;
 import pl.mateuszchudyk.jmath.ast.ASTVariable;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class ConstantFolding implements OptimizationPass {
     @Override
     public ASTExpression run(ASTExpression ast) {

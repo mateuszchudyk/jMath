@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Cosine of x (x in radian).
- * @author Mateusz Chudyk
  */
 public class Cosine implements Function {
     @Override

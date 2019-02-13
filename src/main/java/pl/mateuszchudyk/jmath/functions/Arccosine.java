@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Arccosine of x (x in [-1, 1]).
- * @author Mateusz Chudyk
  */
 public class Arccosine implements Function {
     @Override

@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Natural exponential function of x.
- * @author Mateusz Chudyk
  */
 public class Exponential implements Function {
     @Override

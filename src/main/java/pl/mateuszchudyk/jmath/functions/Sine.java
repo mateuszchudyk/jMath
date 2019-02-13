@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Sine of x (x in radian).
- * @author Mateusz Chudyk
  */
 public class Sine implements Function {
     @Override

@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath;
 
-/**
- * @author Mateusz Chudyk
- */
 public enum OptimizerType {
     Empty,
     Default,

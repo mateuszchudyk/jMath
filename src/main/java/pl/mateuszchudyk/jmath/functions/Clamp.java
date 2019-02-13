@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Takes three parameters: x, a, b. Return true (1.0) if and only if a < x < b else return false (0.0).
- * @author Mateusz Chudyk
  */
 public class Clamp implements Function {
     @Override

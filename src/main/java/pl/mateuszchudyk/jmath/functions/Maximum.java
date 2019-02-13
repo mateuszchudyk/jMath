@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.functions;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class Maximum implements Function {
     @Override
     public String getName() {

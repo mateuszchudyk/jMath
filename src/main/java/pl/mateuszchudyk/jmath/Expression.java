@@ -29,9 +29,6 @@ import java.util.Map;
 import pl.mateuszchudyk.jmath.ast.ASTExpression;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class Expression {
     private final ASTExpression ast;
     private HashMap<String, Double> substitutions;

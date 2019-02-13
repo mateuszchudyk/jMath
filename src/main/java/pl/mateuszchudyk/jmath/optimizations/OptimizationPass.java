@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.optimizations;
 
 import pl.mateuszchudyk.jmath.ast.ASTExpression;
 
-/**
- * @author Mateusz Chudyk
- */
 public interface OptimizationPass {
     /**
      * Return modified input abstract syntax tree of expresssion.

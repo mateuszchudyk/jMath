@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * The larger of the numbers.
- * @author Mateusz Chudyk
  */
 public class Median implements Function {
     @Override

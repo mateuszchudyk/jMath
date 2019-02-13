@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath.operators;
 
-/**
- * @author Mateusz Chudyk
- */
 public enum OperatorType {
     /** Left unary operator */
     Left,

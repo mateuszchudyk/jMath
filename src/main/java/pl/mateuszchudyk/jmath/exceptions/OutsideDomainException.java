@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.exceptions;
 
 import pl.mateuszchudyk.jmath.Operation;
 
-/**
- * @author Mateusz Chudyk
- */
 public class OutsideDomainException extends EvaluationException {
     public OutsideDomainException(Operation operation, int argumentNumber, Double value, String domain) {
         super(operation.getName().toUpperCase() + ": " + argumentNumber +

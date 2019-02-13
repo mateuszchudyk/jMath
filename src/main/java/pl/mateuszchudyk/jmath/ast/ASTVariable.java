@@ -28,9 +28,6 @@ import java.util.Map;
 import pl.mateuszchudyk.jmath.Variable;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public class ASTVariable implements ASTExpression {
     private final Variable variable;
 

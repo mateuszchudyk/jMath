@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public interface Operation {
     /**
      * Get name (keyword) of the operation.

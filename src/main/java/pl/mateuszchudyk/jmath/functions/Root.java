@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Takes two parameters: x, n. Return the nth root of x. If n is even then x in [0, +inf) else x is any real number.
- * @author Mateusz Chudyk
  */
 public class Root implements Function {
     @Override

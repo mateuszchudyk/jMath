@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath.exceptions;
 
-/**
- * @author Mateusz Chudyk
- */
 public class ParseException extends MathException {
     public ParseException(String message) {
         super("Parse Exception: " + message);

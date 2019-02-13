@@ -27,9 +27,6 @@ package pl.mateuszchudyk.jmath.ast;
 import java.util.Map;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
-/**
- * @author Mateusz Chudyk
- */
 public interface ASTExpression {
     /**
      * Evaluate expression.

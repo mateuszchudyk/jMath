@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Hyperbolic tangent of x.
- * @author Mateusz Chudyk
  */
 public class HiperbolicTangent implements Function {
     @Override

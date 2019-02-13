@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath;
 
-/**
- * @author Mateusz Chudyk
- */
 public class Constant extends Variable {
     private final Double value;
 

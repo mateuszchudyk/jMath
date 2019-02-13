@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Binary logarithm of x, x in (0, +inf).
- * @author Mateusz Chudyk
  */
 public class BinaryLogarithm implements Function {
     @Override

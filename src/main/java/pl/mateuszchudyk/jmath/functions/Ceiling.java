@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Ceiling. Return the smallest integer greater then x.
- * @author Mateusz Chudyk
  */
 public class Ceiling implements Function {
     @Override

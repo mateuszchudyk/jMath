@@ -26,9 +26,6 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.Operation;
 
-/**
- * @author Mateusz Chudyk
- */
 public interface Operator extends Operation {
     /**
      * Get priority of the operator.

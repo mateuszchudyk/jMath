@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Absolute value of x.
- * @author Mateusz Chudyk
  */
 public class ToLogical implements Function {
     @Override

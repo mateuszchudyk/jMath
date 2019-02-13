@@ -31,9 +31,6 @@ import pl.mateuszchudyk.jmath.functions.Function;
 import pl.mateuszchudyk.jmath.operators.Operator;
 import pl.mateuszchudyk.jmath.operators.OperatorType;
 
-/**
- * @author Mateusz Chudyk
- */
 public class ASTOperation implements ASTExpression {
     private final ASTExpression[] arguments;
     private final Operation operation;

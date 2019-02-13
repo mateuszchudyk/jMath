@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Return the nearest integer number x.
- * @author Mateusz Chudyk
  */
 public class Round implements Function {
     @Override

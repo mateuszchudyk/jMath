@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Tangent of x (x in radian).
- * @author Mateusz Chudyk
  */
 public class Tangent implements Function {
     @Override

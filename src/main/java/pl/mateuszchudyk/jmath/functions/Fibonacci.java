@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * N-th elemenet of Fibonacci's sequence starting from F_0 = 0, F_1 = 1 (n in {0, 1, 2, ...}).
- * @author Mateusz Chudyk
  */
 public class Fibonacci implements Function {
     private double[] lut;

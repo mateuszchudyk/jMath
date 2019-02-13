@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Takes two parameters: mean, stddev. Return the random number with a normal distribution (stddev in (0, +inf)).
- * @author Mateusz Chudyk
  */
 public class NormalDistributionRandom_0 implements Function {
     private Random random;

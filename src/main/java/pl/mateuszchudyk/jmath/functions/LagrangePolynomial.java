@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Lagrange polynomial. First argument is x (where calculate value of interpolation polynomial) next there are pairs (x, y) of check points.
- * @author Mateusz Chudyk
  */
 public class LagrangePolynomial implements Function {
     @Override

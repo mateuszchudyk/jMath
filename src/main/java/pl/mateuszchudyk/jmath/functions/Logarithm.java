@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Logarithm of x with base b.
- * @author Mateusz Chudyk
  */
 public class Logarithm implements Function {
     @Override

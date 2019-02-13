@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Signum. Return the sign of the given number.
- * @author Mateusz Chudyk
  */
 public class Sign implements Function {
     @Override

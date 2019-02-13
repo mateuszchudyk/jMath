@@ -31,9 +31,6 @@ import pl.mateuszchudyk.jmath.ast.ASTOperation;
 import pl.mateuszchudyk.jmath.ast.ASTVariable;
 import pl.mateuszchudyk.jmath.optimizations.OptimizationPass;
 
-/**
- * @author Mateusz Chudyk
- */
 public class Optimizer {
     private final ArrayList<OptimizationPass> passes;
 

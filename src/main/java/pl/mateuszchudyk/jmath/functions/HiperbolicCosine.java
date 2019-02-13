@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Hyperbolic cosine of x.
- * @author Mateusz Chudyk
  */
 public class HiperbolicCosine implements Function {
     @Override

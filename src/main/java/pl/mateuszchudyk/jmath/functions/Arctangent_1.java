@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Arctangent of x.
- * @author Mateusz Chudyk
  */
 public class Arctangent_1 implements Function {
     @Override

@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Square root of x (x in [0, +inf)).
- * @author Mateusz Chudyk
  */
 public class SquareRoot implements Function {
     @Override

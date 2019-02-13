@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Greates common divisor of the numbers (all in {1, 2, ...}).
- * @author Mateusz Chudyk
  */
 public class GreatestCommonDivisor implements Function {
     @Override

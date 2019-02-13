@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Hyperbolic sine of x.
- * @author Mateusz Chudyk
  */
 public class HiperbolicSine implements Function {
     @Override

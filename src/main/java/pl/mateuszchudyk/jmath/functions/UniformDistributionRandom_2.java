@@ -30,7 +30,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Return the random number with a uniform distribution [a, b). Constraint: b > a.
- * @author Mateusz Chudyk
  */
 public class UniformDistributionRandom_2 implements Function {
     private final Random random;

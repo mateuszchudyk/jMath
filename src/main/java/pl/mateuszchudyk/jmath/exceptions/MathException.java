@@ -24,9 +24,6 @@
 
 package pl.mateuszchudyk.jmath.exceptions;
 
-/**
- * @author Mateusz Chudyk
- */
 public class MathException extends Exception {
     final protected String message;
 

@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
  * Least common multiple of the numbers (all in {1, 2, ...}).
- * @author Mateusz Chudyk
  */
 public class LeastCommonMultiple implements Function {
     @Override

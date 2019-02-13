@@ -29,7 +29,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Return the random number with a uniform distribution [0, 1).
- * @author Mateusz Chudyk
  */
 public class UniformDistributionRandom_0 implements Function {
     private final Random random;

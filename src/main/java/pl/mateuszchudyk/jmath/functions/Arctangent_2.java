@@ -28,7 +28,6 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
  * Return theta from polar coordinate (r, theta) of point (x, y). Any (x, y) without (0, 0).
- * @author Mateusz Chudyk
  */
 public class Arctangent_2 implements Function {
     @Override
