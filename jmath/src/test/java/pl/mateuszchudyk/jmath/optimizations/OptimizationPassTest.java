@@ -26,24 +26,39 @@ package pl.mateuszchudyk.jmath.optimizations;
 
 import pl.mateuszchudyk.jmath.TestBase;
 
-import pl.mateuszchudyk.jmath.ast.ASTExpression;
+import pl.mateuszchudyk.jmath.Expression;
+import pl.mateuszchudyk.jmath.Optimizer;
+import pl.mateuszchudyk.jmath.OptimizerType;
+import pl.mateuszchudyk.jmath.Parser;
+import pl.mateuszchudyk.jmath.ParserType;
+import pl.mateuszchudyk.jmath.Variable;
+import pl.mateuszchudyk.jmath.exceptions.ParseException;
 import pl.mateuszchudyk.jmath.optimizations.OptimizationPass;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * @author Mateusz Chudyk
  */
 public abstract class OptimizationPassTest extends TestBase {
-    public void runCheck(ASTExpression expected, ASTExpression input) {
+    public void runCheck(String expected, String input) {
+        Parser parser = new Parser(ParserType.Default);
+        parser.addVariable(new Variable("x"));
+        parser.addVariable(new Variable("y"));
+        Optimizer optimizer = new Optimizer(OptimizerType.Empty);
         OptimizationPass pass = (OptimizationPass)createOperationInstance();
 
-        ASTExpression output = pass.run(input);
-        if (output == null) {
-            output = input;
+        try {
+            Expression in = parser.parse(input);
+            Expression exp = parser.parse(expected);
+            Expression output = optimizer.apply(in, pass);
+            assertEquals(exp.toString(), output.toString());
         }
-        assertEquals(expected.toString(), output.toString());
+        catch (ParseException e) {
+            fail();
+        }
     }
 
     @Test

@@ -36,46 +36,9 @@ import pl.mateuszchudyk.jmath.Variable;
 public class ConstantFoldingTest extends OptimizationPassTest  {
     @Override
     public void runTest() {
-        {
-            ASTExpression input = new ASTImmidiateValue(new Double(1));
-            ASTExpression expected = new ASTImmidiateValue(new Double(1));
-            runCheck(expected, input);
-        }
-
-        {
-            ASTExpression input = new ASTVariable(new Variable("x"));
-            ASTExpression expected = new ASTVariable(new Variable("x"));
-            runCheck(expected, input);
-        }
-
-        {
-            ASTExpression input = new ASTOperation(
-                new pl.mateuszchudyk.jmath.operators.Addition(),
-                new ASTExpression[] {
-                    new ASTVariable(new Variable("x")),
-                    new ASTImmidiateValue(new Double(2))
-                }
-            );
-            ASTExpression expected = new ASTOperation(
-                new pl.mateuszchudyk.jmath.operators.Addition(),
-                new ASTExpression[] {
-                    new ASTVariable(new Variable("x")),
-                    new ASTImmidiateValue(new Double(2))
-                }
-            );
-            runCheck(expected, input);
-        }
-
-        {
-            ASTExpression input = new ASTOperation(
-                new pl.mateuszchudyk.jmath.operators.Addition(),
-                new ASTExpression[] {
-                    new ASTImmidiateValue(new Double(2)),
-                    new ASTImmidiateValue(new Double(3))
-                }
-            );
-            ASTExpression expected = new ASTImmidiateValue(new Double(5));
-            runCheck(expected, input);
-        }
+        runCheck(/* expected = */ "1", /* inputs = */ "1");
+        runCheck(/* expected = */ "x", /* inputs = */  "x");
+        runCheck(/* expected = */ "x + 2", /* inputs = */  "x + 2");
+        runCheck(/* expected = */ "5", /* inputs = */  "2 + 3");
     }
 }
