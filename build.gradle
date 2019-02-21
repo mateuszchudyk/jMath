@@ -1,6 +1,18 @@
-subprojects {
-    apply plugin: 'java'
+apply plugin: "base"
 
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+subprojects {
+    apply plugin: "java"
+
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
 }
+
+task createOutputDir {
+    mkdir "${project.projectDir}/output"
+}
+
+task deleteOutputDir {
+    delete "${project.projectDir}/output"
+}
+
+clean.dependsOn deleteOutputDir

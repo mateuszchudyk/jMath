@@ -1,5 +1,12 @@
-group 'pl.mateuszchudyk.jmath'
+group "pl.mateuszchudyk.jmath"
 
 dependencies {
-    compile project(':jmath')
+    compile project(":jmath")
 }
+
+task copyArtifacts(type: Copy, dependsOn: rootProject.createOutputDir) {
+    from "${project.projectDir}/build/libs/${project.name}.jar"
+    into "${project.rootProject.projectDir}/output"
+}
+
+build.finalizedBy(copyArtifacts)

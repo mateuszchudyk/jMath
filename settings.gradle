@@ -1,4 +1,4 @@
-rootProject.name = 'jmath'
+rootProject.name = "jmath"
 
-include 'jmath'
-include 'examples'
+include "jmath"
+include "examples"
