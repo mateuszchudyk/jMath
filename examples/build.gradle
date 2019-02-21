@@ -4,8 +4,40 @@ dependencies {
     compile project(":jmath")
 }
 
+def getPackageDir() {
+    return project.group.replace(".", "/") + "/" + project.name
+}
+
+def getExamplesList() {
+    def examples = []
+    fileTree(dir: "src/main/java/" + getPackageDir(), include: "**/*.java").each { f->
+        examples << f.name.take(f.name.lastIndexOf("."))
+    }
+    return examples
+}
+
+getExamplesList().each { name ->
+    tasks.create(name: "create${name}", type: Jar) {
+        manifest {
+            attributes "Main-Class": "${project.group}.examples.${name}"
+            attributes "Class-Path": "jmath-1.0.0.jar"
+        }
+        from("${project.buildDir}/classes/java/main/${getPackageDir()}/${name}.class") {
+            into("${getPackageDir()}")
+        }
+        baseName name
+    }
+}
+
+build {
+    getExamplesList().each { name ->
+        dependsOn "create${name}"
+    }
+}
+
 task copyArtifacts(type: Copy, dependsOn: rootProject.createOutputDir) {
-    from "${project.projectDir}/build/libs/${project.name}.jar"
+    from "${project.buildDir}/libs/"
+    include "*Example.jar" // TODO: change to "*.jar" but first disable building examples.jar
     into "${project.rootProject.projectDir}/output"
 }
 
