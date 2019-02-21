@@ -5,7 +5,7 @@
 
 ## Overview
 
-**jMath** is a mathematical library to evaluate complicated expressions. Main features:
+**jMath** is a mathematical library to evaluate complicated expression written as a `string`. Main features:
   - Expressions are stored as `Abstract Syntax Tree` so the expression can be evaluated many times without re-parsing.
   - Expressions can contains variables.
   - Support for custom function and operators.

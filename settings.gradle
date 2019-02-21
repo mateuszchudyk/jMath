@@ -1,3 +1,4 @@
 rootProject.name = 'jmath'
 
 include 'jmath'
+include 'examples'

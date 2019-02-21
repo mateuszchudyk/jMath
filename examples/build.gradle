@@ -1,0 +1,5 @@
+group 'pl.mateuszchudyk.jmath'
+
+dependencies {
+    compile project(':jmath')
+}
