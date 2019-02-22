@@ -31,6 +31,9 @@ import pl.mateuszchudyk.jmath.functions.Function;
 import pl.mateuszchudyk.jmath.operators.Operator;
 import pl.mateuszchudyk.jmath.operators.OperatorType;
 
+/**
+ * Operation in <i>Abstract Syntax Tree</i>.
+ */
 public class ASTOperation implements ASTExpression {
     private final ASTExpression[] arguments;
     private final Operation operation;
@@ -74,14 +77,29 @@ public class ASTOperation implements ASTExpression {
         return result;
     }
 
+    /**
+     * Get operation.
+     *
+     * @result Operation.
+     */
     public Operation getOperation() {
         return operation;
     }
 
+    /**
+     * Get operation number of arguments.
+     *
+     * @result Number of arguments.
+     */
     public int getNumberOfArguments() {
         return arguments.length;
     }
 
+    /**
+     * Get operation's i-th argument as <i>Abstract Syntax Tree</i>.
+     *
+     * @result i-th arguemnt as <i>Abstract Syntax Tree</i>.
+     */
     public ASTExpression getArgument(int i) {
         if (arguments == null || i < 0 || i >= arguments.length)
             return null;
@@ -89,6 +107,13 @@ public class ASTOperation implements ASTExpression {
         return arguments[i];
     }
 
+    /**
+     * Set operation's i-th argument.
+     *
+     * @param i Argument index.
+     * @param argument Argument <i>Abstract Syntax Tree</i>
+     * @result i-th argument as <i>Abstract Syntax Tree</i>.
+     */
     public void setArgument(int i, ASTExpression argument) {
         if (arguments == null || i < 0 || i >= arguments.length)
             return;

@@ -24,7 +24,26 @@
 
 package pl.mateuszchudyk.jmath;
 
+/**
+ * Predefined parser types.
+ *
+ * <p>Predefined sets of built-in constants, variables, operators and functions
+ * that are added to the parser by default.</p>
+ */
 public enum ParserType {
+    /**
+     * Empty parser.
+     *
+     * <p>No built-in constants, variables, operators or functions are added to
+     * the parser by default.</p>
+     */
     Empty,
+
+    /**
+     * Default parser.
+     *
+     * <p>All built-in constants, variables, operators and functions are added
+     * to the parser by default.</p>
+     */
     Default,
 }

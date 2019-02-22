@@ -26,11 +26,15 @@ package pl.mateuszchudyk.jmath.optimizations;
 
 import pl.mateuszchudyk.jmath.ast.ASTExpression;
 
+/**
+ * Optimization pass interface.
+ */
 public interface OptimizationPass {
     /**
-     * Return modified input abstract syntax tree of expresssion.
-     * @param ast AST of expression.
-     * @return AST after optimization or null if nothing has changed.
+     * Apply optimization on <i>Abstract Syntax Tree</i>.
+     *
+     * @param ast <i>Abstract Syntax Tree</i>.
+     * @return <i>Abstract Syntax Tree</i> after optimization or null if nothing has changed.
      */
     public ASTExpression run(ASTExpression ast);
 }

@@ -43,12 +43,51 @@ import pl.mateuszchudyk.jmath.operators.AssociativeType;
 import pl.mateuszchudyk.jmath.operators.Operator;
 import pl.mateuszchudyk.jmath.operators.OperatorType;
 
+/**
+ * Parser class.
+ *
+ * <p>Parser class is responsible for converting an expression written as a string
+ * to <i>Abstract Syntax Tree</i> form. To do that, it needs to know what
+ * constants, variables, operators and functions are available. Parser is case
+ * insensitive. During resolving symbols, parser uses following rules:
+ * <ul>
+ * <li>constants and variables by name,</li>
+ * <li>operators by name and type ({@link OperatorType}),</li>
+ * <li>functions by name and number of arguments,</li>
+ * </ul></p>
+ *
+ * <p>Built-in constants:
+ * <ul>
+ * <li>numeric: <i>pi</i>, <i>e</i>, <i>inf</i>,</li>
+ * <li>logical: <i>true</i>, <i>false</i>.</li>
+ * </ul></p>
+ *
+ * <p>Built-in operators:
+ * <ul>
+ * <li>arithmetic: <i>+</i>, <i>-</i>, <i>*</i>, <i>/</i>, <i>^</i> (power), <i>-</i> (negation),</li>
+ * <li>comparators: <i>=</i>, <i>&lt;&gt;</i>, <i>&lt;</i>, <i>&gt;</i>, <i>&lt;=</i>, <i>&gt;=</i>,</li>
+ * <li>logical: <i>not</i>, <i>or</i>, <i>and</i>, <i>xor</i>, <i>nor</i>, <i>nand</i>, <i>&lt;=&gt;</i> (if and only if), <i>=&gt;</i> (consequence),</li>
+ * <li>other: <i>%</i> (percentage), <i>mod</i> (modulo).</li>
+ * </ul></p>
+ *
+ * <p>Built-in functions:
+ * <ul>
+ * <li>basic: <i>pow</i>, <i>sqrt</i>, <i>root</i>, <i>exp</i>, <i>log</i>, <i>log2</i>, <i>log10</i>, <i>abs</i>, <i>floor</i>, <i>ceil</i>, <i>round</i>, <i>clamp</i>, <i>sgn</i>, <i>indicator</i>,</li>
+ * <li>trigonometric: <i>sin</i>, <i>cos</i>, <i>tan</i>, <i>asin</i>, <i>acos</i>, <i>atan</i>, <i>atan2</i>, <i>sinh</i>, <i>cosh</i>, <i>tanh</i>,</li>
+ * <li>statistical: <i>min</i>, <i>max</i>, <i>mean</i>, <i>stddev</i>, <i>median</i>,</li>
+ * <li>random: <i>rand</i> (uniform), <i>nrand</i> (normal),</li>
+ * <li>conversion: <i>to_degrees</i>, <i>to_radians</i>, <i>to_logical</i>,</li>
+ * <li>compound: <i>gcd</i>, <i>lcm</i>, <i>factorial</i>, <i>fib</i>, <i>lagrange</i>, <i>poly</i>.</li>
+ * </ul></p>
+ *
+ */
 public final class Parser {
     private final Map<TokenType, List<TokenType>> rules;
+
     private final Map<String, Constant> constants;
+    private final Map<String, Variable> variables;
     private final Map<String, List<Operator>> operators;
     private final Map<String, List<Function>> functions;
-    private final Map<String, Variable> variables;
 
     private enum TokenType {
         Begin,
@@ -83,6 +122,12 @@ public final class Parser {
         }
     }
 
+    /**
+     * Constructor.
+     *
+     * @param type Parser type, determine which built-in constants, operators
+     * and function are added by default.
+     */
     public Parser(ParserType type) {
         this.rules = new HashMap<>();
         this.constants = new HashMap<>();
@@ -260,17 +305,22 @@ public final class Parser {
     }
 
     /**
-     * Add operator.
-     * @param constant Constant.
-     * @return Returns false if the name is reserved already.
+     * Add new constant to the parser.
+     *
+     * <p>Constant name must be unique in respect to all added constants,
+     * variables, operator and functions. Otherwise, the constant is not added
+     * and false is returned.</p>
+     *
+     * @param constant Constant to be added.
+     * @return True if the constant has beed added, false otherwise.
      */
     public boolean addConstant(Constant constant) {
         String name = constant.getName().toLowerCase();
 
         if (constants.containsKey(name) ||
+            variables.containsKey(name) ||
             operators.containsKey(name) ||
-            functions.containsKey(name) ||
-            variables.containsKey(name))
+            functions.containsKey(name))
         {
             return false;
         }
@@ -280,9 +330,10 @@ public final class Parser {
     }
 
     /**
-     * Get the constant by the name.
+     * Get added constant by its name.
+     *
      * @param name Name of the constant.
-     * @return Operator.
+     * @return Constant or null if there is no added constant with that name.
      */
     public Constant getConstantByName(String name) {
         name = name.toLowerCase();
@@ -296,8 +347,9 @@ public final class Parser {
     }
 
     /**
-     * Get all added constants.
-     * @return List of all added operators.
+     * Get list of all added constants sorted by name.
+     *
+     * @return List of all added constants sorted by name.
      */
     public List<Constant> getAllConstants() {
         List<Constant> result = new ArrayList<>();
@@ -315,16 +367,66 @@ public final class Parser {
     }
 
     /**
-     * Add operator.
-     * @param operator Operator to add.
-     * @return Returns false if there is already a function or variable of the same name.
+     * Add new variable to the parser.
+     *
+     * <p>Variable name must be unique in respect to all added constants,
+     * variables, operator and functions. Otherwise, the variable is not added
+     * and false is returned.</p>
+     *
+     * @param variable Variable to be added.
+     * @return True if the variable has beed added, false otherwise.
+     */
+    public boolean addVariable(Variable variable) {
+        String name = variable.getName().toLowerCase();
+
+        if (constants.containsKey(name) ||
+            variables.containsKey(name) ||
+            operators.containsKey(name) ||
+            functions.containsKey(name))
+        {
+            return false;
+        }
+
+        variables.put(name, variable);
+        return true;
+    }
+
+    /**
+     * Get list of all added variables sorted by name.
+     *
+     * @return List of all added variables sorted by name.
+     */
+    public List<Variable> getAllVariables() {
+        List<Variable> result = new ArrayList<>();
+
+        for (Variable variable : variables.values()) {
+            result.add(new Variable(variable.getName()));
+        }
+        Collections.sort(
+            result,
+            (Variable a, Variable b) -> a.getName().toLowerCase().compareTo(b.getName().toLowerCase())
+        );
+
+        return result;
+    }
+
+    /**
+     * Add new operator to the parser.
+     *
+     * <p>Operator name must be unique in respect to all added constants,
+     * variables and functions. Pair (operator.name, operator.type) must be
+     * unique in respect to all addded operators. Otherwise the constant is not
+     * added and false is returned.</p>
+     *
+     * @param operator Operator to be added.
+     * @return True if the operator has beed added, false otherwise.
      */
     public boolean addOperator(Operator operator) {
         String name = operator.getName().toLowerCase();
 
         if (constants.containsKey(name) ||
-            functions.containsKey(name) ||
-            variables.containsKey(name))
+            variables.containsKey(name) ||
+            functions.containsKey(name))
         {
             return false;
         }
@@ -347,9 +449,10 @@ public final class Parser {
     }
 
     /**
-     * Get operator by name.
-     * @param name Name of operator.
-     * @return Operator.
+     * Get added operator by its name.
+     *
+     * @param name Name of the operator.
+     * @return List of operators or null if there is no added operator with that name.
      */
     public List<Operator> getOperatorByName(String name) {
         name = name.toLowerCase();
@@ -363,8 +466,9 @@ public final class Parser {
     }
 
     /**
-     * Get all added operators.
-     * @return List of all added operators.
+     * Get list of all added operators sorted by name.
+     *
+     * @return List of all added operators sorted by name.
      */
     public List<List<Operator>> getAllOperators() {
         List<List<Operator>> result = new ArrayList<>();
@@ -382,16 +486,25 @@ public final class Parser {
     }
 
     /**
-     * Add function.
-     * @param function Function to add.
-     * @return Returns false if there is already a operators or variable of the same name.
+     * Add new function to the parser.
+     *
+     * <p>Function name must be unique in respect to all added constants,
+     * variables and functions. Otherwise the constant is not
+     * added and false is returned.</p>
+     *
+     * <p>If pair (function.name, function.numberOfArguments) is not unique in
+     * respect to all added functions then {@link ParseException}
+     * "Expression is ambiguous" can be thrown.</p>
+     *
+     * @param function The function to be added.
+     * @return True if the function has beed added, false otherwise.
      */
     public boolean addFunction(Function function) {
         String name = function.getName().toLowerCase();
 
         if (constants.containsKey(name) ||
-            operators.containsKey(name) ||
-            variables.containsKey(name))
+            variables.containsKey(name) ||
+            operators.containsKey(name))
         {
             return false;
         }
@@ -409,9 +522,10 @@ public final class Parser {
     }
 
     /**
-     * Get function by name.
-     * @param name Name of function.
-     * @return Function.
+     * Get added function by its name.
+     *
+     * @param name Name of the function.
+     * @return List of functions or null if there is no added function with that name.
      */
     public List<Function> getFunctionByName(String name) {
         name = name.toLowerCase();
@@ -425,8 +539,9 @@ public final class Parser {
     }
 
     /**
-     * Get all added functions.
-     * @return List of all added functions.
+     * Get list of all added functions sorted by name.
+     *
+     * @return List of all added functions sorted by name.
      */
     public List<List<Function>> getAllFunctions() {
         List<List<Function>> result = new ArrayList<>();
@@ -443,17 +558,24 @@ public final class Parser {
         return result;
     }
 
-    public boolean addVariable(Variable variable) {
-        String variableName = variable.getName().toLowerCase();
-        if (!variables.containsKey(variableName) && !operators.containsKey(variableName) && !functions.containsKey(variableName)) {
-            variables.put(variableName, variable);
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
+    /**
+     * Parse an expression written as a string.
+     *
+     * <p>Expression must satisfy following conditions, otherwise {@link ParseException}
+     * is thrown:
+     * <ul>
+     *   <li>All constants, variables, operators and functions used in the given
+     *   expression have to be known to parser (added before parsing).</li>
+     *   <li>Parentheses must be balanced.</li>
+     *   <li>Expression must be resolvable.</li>
+     *   <li>Expression cannot be ambiguous.</li>
+     * </ul>
+     * </p>
+     *
+     * @param expression Expression written as a string.
+     * @return Exression object.
+     * @throws ParseException
+     */
     public Expression parse(String expression) throws ParseException {
         if (expression.isEmpty())
             return null;

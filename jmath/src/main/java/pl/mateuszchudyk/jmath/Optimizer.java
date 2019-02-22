@@ -31,9 +31,29 @@ import pl.mateuszchudyk.jmath.ast.ASTOperation;
 import pl.mateuszchudyk.jmath.ast.ASTVariable;
 import pl.mateuszchudyk.jmath.optimizations.OptimizationPass;
 
+/**
+ * Optimizer class.
+ *
+ * <p>Optimizer class is responsible for optimziation an expression in
+ * <i>Abstract Syntax Tree</i> form. It can apply only one optimization pass on
+ * the expression or all added optimization passes until no one of them modify
+ * the expression.</p>
+ *
+ * <p>Built-in optimization passes:
+ * <ul>
+ * <li>BinaryOperatorSimplifying,</li>
+ * <li>ConstantFolding.</li>
+ * </ul></p>
+ */
 public class Optimizer {
     private final ArrayList<OptimizationPass> passes;
 
+    /**
+     * Constructor.
+     *
+     * @param type Optimizer type, determine which built-in optimization passes
+     * are added by default.
+     */
     public Optimizer(OptimizerType type) {
         passes = new ArrayList<>();
 
@@ -45,15 +65,20 @@ public class Optimizer {
 
     /**
      * Add optimization pass.
-     * @param pass Pass to add.
+     *
+     * @param pass Optimization pass to be added.
      */
     public final void addPass(OptimizationPass pass) {
         passes.add(pass);
     }
 
     /**
-     * Return result of applying all optimization passes to given expression.
-     * @param expression Expression to optimization.
+     * Optimize an expression.
+     *
+     * <p>Optimize expression by applying all optimization passes util no one
+     * modify the expression.</p>
+     *
+     * @param expression Expression to be optimized.
      * @return Optimized expression.
      */
     public Expression optimize(Expression expression) {
@@ -75,9 +100,10 @@ public class Optimizer {
     }
 
     /**
-     * Return result of applying given optimization pass to given expression.
-     * @param expression Expression to optimization.
-     * @param pass Pass which will be applied.
+     * Apply single optimization pass to expression.
+     *
+     * @param expression Expression to be optimized.
+     * @param pass Pass to be run on the expression.
      * @return Optimized expression.
      */
     public Expression apply(Expression expression, OptimizationPass pass) {

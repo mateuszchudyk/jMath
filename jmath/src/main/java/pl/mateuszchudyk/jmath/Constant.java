@@ -24,17 +24,29 @@
 
 package pl.mateuszchudyk.jmath;
 
+/**
+ * Represents constant.
+ *
+ * <p>Constant has a name and value. Value cannot be changed.</p>
+ */
 public class Constant extends Variable {
     private final Double value;
 
+    /**
+     * Constructor.
+     *
+     * @param name Constant name.
+     * @param value Constant value.
+     */
     public Constant(String name, Double value) {
         super(name);
         this.value = value;
     }
 
     /**
-     * Get value of the constant.
-     * @return Value of the constant.
+     * Get constant value.
+     *
+     * @return Constant value.
      */
     public Double getValue() {
         return value;

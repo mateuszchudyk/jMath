@@ -26,23 +26,29 @@ package pl.mateuszchudyk.jmath;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Operation interface.
+ */
 public interface Operation {
     /**
-     * Get name (keyword) of the operation.
-     * @return Name of the operation.
+     * Get operation name.
+     *
+     * @return Operation name.
      */
     public String getName();
 
     /**
-     * Get description of the operation.
-     * @return Description of the operation.
+     * Get operation description.
+     *
+     * @return Operation description.
      */
     public String getDescription();
 
     /**
-     * Evaluate value of the operation.
-     * @param args List of arguments of the operation.
-     * @return Value of the operation.
+     * Evaluate operation for give list of arguments.
+     *
+     * @param args List of arguments.
+     * @return Operation result.
      * @throws EvaluationException
      */
     public Double evaluate(Double[] args) throws EvaluationException;

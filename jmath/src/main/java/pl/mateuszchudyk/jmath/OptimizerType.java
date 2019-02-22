@@ -24,7 +24,26 @@
 
 package pl.mateuszchudyk.jmath;
 
+/**
+ * Predefined optimizer types.
+ *
+ * <p>Predefined sets of built-in optimization passes that are added to
+ * the optimizer by default.</p>
+ */
 public enum OptimizerType {
+    /**
+     * Empty optimizer.
+     *
+     * <p>No built-in optimization passes are added to the optimizer by
+     * default.</p>
+     */
     Empty,
+
+    /**
+     * Default optimizer.
+     *
+     * <p>All built-in optimization passes are added to the optimizer by
+     * default.</p>
+     */
     Default,
 }

@@ -26,22 +26,28 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.Operation;
 
+/**
+ * Operator interface.
+ */
 public interface Operator extends Operation {
     /**
-     * Get priority of the operator.
-     * @return Priority of the operator.
+     * Get operator priority. The lower the stronger.
+     *
+     * @return Operator priority.
      */
     public int getPriority();
 
     /**
      * Get operator type.
-     * @return Type of the operator.
+     *
+     * @return Operator type.
      */
     public OperatorType getOperatorType();
 
     /**
-     * Return associative type.
-     * @return Associative type.
+     * Get operator associative type.
+     *
+     * @return Operator associative type.
      */
     public AssociativeType getAssociativeType();
 }

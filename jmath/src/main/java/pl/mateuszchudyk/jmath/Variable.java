@@ -24,16 +24,28 @@
 
 package pl.mateuszchudyk.jmath;
 
+/**
+ * Represents variable.
+ *
+ * <p>Variable has only a name. Its value is set independent for each
+ * {@link Expression}.</p>
+ */
 public class Variable {
     private final String name;
 
+    /**
+     * Constructor.
+     *
+     * @param name Variable name.
+     */
     public Variable(String name) {
         this.name = name;
     }
 
     /**
-     * Get name of the variable.
-     * @return Name of the variable.
+     * Get variable name.
+     *
+     * @return Variable value.
      */
     public String getName() {
         return name;

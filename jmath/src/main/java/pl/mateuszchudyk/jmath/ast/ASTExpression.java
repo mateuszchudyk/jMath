@@ -27,9 +27,13 @@ package pl.mateuszchudyk.jmath.ast;
 import java.util.Map;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * <i>Abstract Syntax Tree</i> interface.
+ */
 public interface ASTExpression {
     /**
-     * Evaluate expression.
+     * Evaluate <i>Abstract Syntax Tree</i>.
+     *
      * @param substitutions Variable substitutions.
      * @return Evaluation result.
      * @throws EvaluationException
@@ -37,8 +41,9 @@ public interface ASTExpression {
     Double evaluate(Map<String, Double> substitutions) throws EvaluationException;
 
     /**
-     * Convert ASTExpression to the String.
-     * @return String representation of the ASTExpression.
+     * Convert <i>Abstract Syntax Tree</i> to string.
+     *
+     * @return <i>Abstract Syntax Tree</i> as a string.
      */
     @Override
     String toString();

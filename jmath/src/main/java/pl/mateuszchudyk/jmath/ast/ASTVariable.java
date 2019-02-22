@@ -28,6 +28,9 @@ import java.util.Map;
 import pl.mateuszchudyk.jmath.Variable;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Variable in <i>Abstract Syntax Tree</i>.
+ */
 public class ASTVariable implements ASTExpression {
     private final Variable variable;
 

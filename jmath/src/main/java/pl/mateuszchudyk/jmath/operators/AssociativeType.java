@@ -24,8 +24,30 @@
 
 package pl.mateuszchudyk.jmath.operators;
 
+/**
+ * Type of Associative
+ */
 public enum AssociativeType {
+    /**
+     * Left associative.
+     *
+     * <p> A op B op C = (A op B) op C</p>
+     */
     Left,
+
+    /**
+     * Right associative.
+     *
+     * <p> A op B op C = A op (B op C)</p>
+     */
     Right,
-    Both,   /** NOTE: Currently unused and teated like Left. **/
+
+    /**
+     * Left and right associative.
+     *
+     * <p> A op B op C = (A op B) op C = A op (B op C)</p>
+     *
+     * NOTE: Currently it is treated like Left.
+     */
+    Both,
 }

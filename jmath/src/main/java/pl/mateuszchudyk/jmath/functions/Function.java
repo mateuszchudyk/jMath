@@ -26,9 +26,13 @@ package pl.mateuszchudyk.jmath.functions;
 
 import pl.mateuszchudyk.jmath.Operation;
 
+/**
+ * Function interface.
+ */
 public interface Function extends Operation {
     /**
      * Check if the number of arguments is correct.
+     *
      * @param numberOfArguments Number of arguments to check.
      * @return True if correct.
      */

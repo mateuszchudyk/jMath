@@ -29,6 +29,12 @@ import java.util.Map;
 import pl.mateuszchudyk.jmath.ast.ASTExpression;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Expression object.
+ *
+ * <p>It represents expression as a <i>Abstract Syntax Tree</i> and is a result
+ * of parsing expression written as a string.</p>
+ */
 public class Expression {
     private final ASTExpression ast;
     private HashMap<String, Double> substitutions;
@@ -44,8 +50,9 @@ public class Expression {
 
     /**
      * Set value of the given variable.
+     *
      * @param name Variable name.
-     * @param value New value of variable.
+     * @param value Value of the variable.
      */
     public void setVariable(String name, Double value) {
         substitutions.put(name, value);
@@ -53,7 +60,8 @@ public class Expression {
 
     /**
      * Set values of many variables at once.
-     * @param substitutions Variable substitutions.
+     *
+     * @param substitutions Variables substitutions.
      */
     public void setVariables(Map<String, Double> substitutions) {
         if (substitutions == null)
@@ -65,13 +73,24 @@ public class Expression {
 
     /**
      * Evaluate expression.
-     * @return Evaluation result.
+     *
+     * <p>Before evaluation, values of all variables must be set, otherwise
+     * {@link EvaluationException} is thrown.</p>
+     *
+     * @return Result of the expression for given variables substitution.
      * @throws EvaluationException
      */
     public Double evaluate() throws EvaluationException {
         return ast.evaluate(substitutions);
     }
 
+    /**
+     * Convert expression to string.
+     *
+     * Convert <i>Abstract Syntax Tree</i> of the expression to string.
+     *
+     * @return <i>Abstract Syntax Tree</i> as a string.
+     */
     @Override
     public String toString() {
         return ast.toString();

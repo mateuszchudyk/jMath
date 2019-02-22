@@ -27,6 +27,9 @@ package pl.mateuszchudyk.jmath.ast;
 import java.util.Map;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Immidiate value in <i>Abstract Syntax Tree</i>.
+ */
 public class ASTImmidiateValue implements ASTExpression {
     private final Double value;
 

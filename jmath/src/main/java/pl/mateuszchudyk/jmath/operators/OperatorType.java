@@ -24,13 +24,22 @@
 
 package pl.mateuszchudyk.jmath.operators;
 
+/**
+ * Operator type.
+ */
 public enum OperatorType {
-    /** Left unary operator */
+    /**
+     * Left unary operator.
+     */
     Left,
 
-    /** Binary operator */
+    /**
+     * Binary unary operator.
+     */
     Middle,
 
-    /** Right unary operator */
+    /**
+     * Right unary operator.
+     */
     Right
 }
