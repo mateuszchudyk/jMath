@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Sine of x (x in radian).
+ * Sine.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>sin(x)</td></tr>
+ * <tr><th>Domain</th><td>any number (in radians!)</td></tr>
+ * </table></p>
  */
 public class Sine implements Function {
     @Override

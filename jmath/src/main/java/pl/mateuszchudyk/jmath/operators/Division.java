@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Division.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x / y</td></tr>
+ * <tr><th>Domain</th><td>y is not 0</td></tr>
+ * <tr><th>Priority</th><td>4</td></tr>
+ * <tr><th>Associative</th><td>left</td></tr>
+ * </table></p>
+ */
 public class Division implements Operator {
     @Override
     public String getName() {

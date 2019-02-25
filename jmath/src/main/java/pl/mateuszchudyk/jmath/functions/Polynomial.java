@@ -27,7 +27,13 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Lagrange interpolation. First argument is x (where calculate value of interpolation polynomial) next there are pairs (x, y) of check points.
+ * Polynomial. It evaluate polynomial: a0 + a1 * x + a2 * x^2 + ... + an * x^n.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>poly(x, a0, a1, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>At least 2: x and 0-th coefficient.</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class Polynomial implements Function {
     @Override

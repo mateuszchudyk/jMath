@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Natural exponential function of x.
+ * Natural exponential. It evaluates e^x.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>exp(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Exponential implements Function {
     @Override

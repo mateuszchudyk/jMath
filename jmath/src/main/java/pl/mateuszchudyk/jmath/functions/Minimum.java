@@ -26,6 +26,15 @@ package pl.mateuszchudyk.jmath.functions;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Minimum.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>min(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
+ */
 public class Minimum implements Function {
     @Override
     public String getName() {

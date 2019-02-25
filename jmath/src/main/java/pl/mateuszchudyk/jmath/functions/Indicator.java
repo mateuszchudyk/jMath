@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Takes three parameters: x, a, b. Return true (1.0) if and only if a < x < b else return false (0.0).
+ * Indicator. It thaes three argumets: x, a, b and return if a &lt;= x &lt;= b.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>indicator(x, a, b)</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class Indicator implements Function {
     @Override

@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Creater then or equal.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x &gt;= y</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * <tr><th>Priority</th><td>7</td></tr>
+ * <tr><th>Associative</th><td>left</td></tr>
+ * </table></p>
+ */
 public class GreaterThenOrEqual implements Operator {
     @Override
     public String getName() {

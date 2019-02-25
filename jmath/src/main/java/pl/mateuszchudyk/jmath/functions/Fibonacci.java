@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * N-th elemenet of Fibonacci's sequence starting from F_0 = 0, F_1 = 1 (n in {0, 1, 2, ...}).
+ * Fibonnaci. It takes one argument and returns n-th element of Fibonacci's
+ * sequence (starting from F_0 = 0, F_1 = 1).
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>fib(n)</td></tr>
+ * <tr><th>Domain</th><td>non-negative integer number</td></tr>
+ * </table></p>
  */
 public class Fibonacci implements Function {
     private double[] lut;

@@ -27,7 +27,13 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Takes three parameters: x, a, b. Return true (1.0) if and only if a < x < b else return false (0.0).
+ * Clamp. It takes three parameters: x, a, b and returns x if a &lt; x &lt; b,
+ * otherwise a (if x &lt; a) or b (if x &gt; b).
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>clamp(x, a, b)</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class Clamp implements Function {
     @Override
@@ -37,7 +43,7 @@ public class Clamp implements Function {
 
     @Override
     public String getDescription() {
-        return "Clamp(x, a, b) = if x < a then return x, if x > b then return b, else return x.";
+        return "Clamp(x, a, b) = if x < a then return a, if x > b then return b, else return x.";
     }
 
     @Override

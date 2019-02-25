@@ -29,7 +29,12 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Factorial of n (n in {0, 1, 2, ...}).
+ * Factorial. It takes one argument and return n!.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>factorial(n)</td></tr>
+ * <tr><th>Domain</th><td>non-negative integer number</td></tr>
+ * </table></p>
  */
 public class Factorial implements Function {
     private HashMap<Integer, Double> lut;

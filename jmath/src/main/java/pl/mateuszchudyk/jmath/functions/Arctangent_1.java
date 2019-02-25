@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Arctangent of x.
+ * Arctangent.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>atan(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Arctangent_1 implements Function {
     @Override

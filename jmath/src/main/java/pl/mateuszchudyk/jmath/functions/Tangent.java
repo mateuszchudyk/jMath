@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Tangent of x (x in radian).
+ * Tangent.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>tan(x)</td></tr>
+ * <tr><th>Domain</th><td>any number (in radians!)</td></tr>
+ * </table></p>
  */
 public class Tangent implements Function {
     @Override

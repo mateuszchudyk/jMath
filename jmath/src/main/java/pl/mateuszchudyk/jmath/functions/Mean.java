@@ -27,7 +27,13 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * The larger of the numbers.
+ * Mean.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>mean(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class Mean implements Function {
     @Override

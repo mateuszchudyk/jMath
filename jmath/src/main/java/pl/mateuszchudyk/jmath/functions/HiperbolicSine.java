@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Hyperbolic sine of x.
+ * Hyperbolic sine.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>sinh(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class HiperbolicSine implements Function {
     @Override

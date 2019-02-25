@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Absolute value of x.
+ * Absolute value.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>abs(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class AbsoluteValue implements Function {
     @Override

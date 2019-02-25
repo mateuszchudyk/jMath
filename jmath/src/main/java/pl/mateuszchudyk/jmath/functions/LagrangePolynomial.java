@@ -27,7 +27,15 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Lagrange polynomial. First argument is x (where calculate value of interpolation polynomial) next there are pairs (x, y) of check points.
+ * Lagrange polynomial. It evaluate Lagrange polynomial interpolation in the
+ * given point. First argument is point in which polynomial is evaluated,
+ * the rest of arguemnts is a list of points.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>lagrange(x, x1, y1, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>Odd number, at least 3.</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class LagrangePolynomial implements Function {
     @Override

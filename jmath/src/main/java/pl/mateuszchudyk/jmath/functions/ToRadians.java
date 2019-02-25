@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Convert radian to degrees.
+ * Degrees to radians.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>to_radians(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class ToRadians implements Function {
     public ToRadians() {

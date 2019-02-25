@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Arcsine of x (x in [-1, 1]).
+ * Arcsine.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>asin(x)</td></tr>
+ * <tr><th>Domain</th><td>[-1, 1]</td></tr>
+ * </table></p>
  */
 public class Arcsine implements Function {
     @Override

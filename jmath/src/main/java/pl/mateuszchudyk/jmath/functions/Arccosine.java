@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Arccosine of x (x in [-1, 1]).
+ * Arccosine.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>acos(x)</td></tr>
+ * <tr><th>Domain</th><td>[-1, 1]</td></tr>
+ * </table></p>
  */
 public class Arccosine implements Function {
     @Override

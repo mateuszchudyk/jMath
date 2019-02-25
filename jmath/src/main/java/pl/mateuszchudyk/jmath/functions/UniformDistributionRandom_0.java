@@ -28,7 +28,11 @@ import java.util.Random;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Return the random number with a uniform distribution [0, 1).
+ * Random number from uniform distribution [0, 1].
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>rand()</td></tr>
+ * </table></p>
  */
 public class UniformDistributionRandom_0 implements Function {
     private final Random random;

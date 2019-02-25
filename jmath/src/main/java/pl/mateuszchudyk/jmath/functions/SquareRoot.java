@@ -28,7 +28,12 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Square root of x (x in [0, +inf)).
+ * Square root.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>sqrt(x)</td></tr>
+ * <tr><th>Domain</th><td>[0, +inf)</td></tr>
+ * </table></p>
  */
 public class SquareRoot implements Function {
     @Override

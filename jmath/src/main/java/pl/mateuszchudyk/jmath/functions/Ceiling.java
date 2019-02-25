@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Ceiling. Return the smallest integer greater then x.
+ * Ceiling.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>ceil(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Ceiling implements Function {
     @Override

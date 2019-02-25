@@ -29,7 +29,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Return the random number with a uniform distribution [a, b). Constraint: b > a.
+ * Random number from uniform distribution. It takes two parameters: a, b and
+ * return a random number from a uniform distribution [a, b).
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>rand()</td></tr>
+ * <tr><th>Domain</th><td>a &lt; b</td></tr>
+ * </table></p>
  */
 public class UniformDistributionRandom_2 implements Function {
     private final Random random;
@@ -50,7 +56,6 @@ public class UniformDistributionRandom_2 implements Function {
 
     @Override
     public Double evaluate(Double[] args) throws EvaluationException {
-        // Check domain
         if (args[0] >= args[1])
             throw new OutsideDomainException(this, 2, args[1], "b > a ("+args[1]+" <= "+args[0]+")");
         return args[0] + random.nextDouble() * (args[1] - args[0]);

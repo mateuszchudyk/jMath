@@ -28,7 +28,12 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Common logarithm of x, x in (0, +inf).
+ * Common logarithm / decimal logarithm.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>log10(x)</td></tr>
+ * <tr><th>Domain</th><td>any positive number</td></tr>
+ * </table></p>
  */
 public class CommonLogarithm implements Function {
     @Override

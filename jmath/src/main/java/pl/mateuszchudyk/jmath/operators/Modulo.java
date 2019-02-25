@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Modulo.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x mod y</td></tr>
+ * <tr><th>Domain</th><td>y is not 0</td></tr>
+ * <tr><th>Priority</th><td>4</td></tr>
+ * <tr><th>Associative</th><td>left</td></tr>
+ * </table></p>
+ */
 public class Modulo implements Operator {
     @Override
     public String getName() {

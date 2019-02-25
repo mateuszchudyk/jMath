@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Percentage.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x%</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * <tr><th>Priority</th><td>4</td></tr>
+ * <tr><th>Associative</th><td>left</td></tr>
+ * </table></p>
+ */
 public class Percentage implements Operator {
     @Override
     public String getName() {

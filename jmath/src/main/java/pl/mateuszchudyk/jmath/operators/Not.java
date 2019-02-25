@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Logical NOT. Operands are automatically converted to logical.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>not x</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * <tr><th>Priority</th><td>3</td></tr>
+ * <tr><th>Associative</th><td>right</td></tr>
+ * </table></p>
+ */
 public class Not implements Operator {
     @Override
     public String getName() {

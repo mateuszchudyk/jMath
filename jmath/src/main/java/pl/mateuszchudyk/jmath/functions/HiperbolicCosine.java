@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Hyperbolic cosine of x.
+ * Hyperbolic cosine.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>cosh(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class HiperbolicCosine implements Function {
     @Override

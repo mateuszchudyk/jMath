@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Return theta from polar coordinate (r, theta) of point (x, y). Any (x, y) without (0, 0).
+ * Arctangent. It returns an angle between (x, y) and X-axis.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>atan2(x, y)</td></tr>
+ * <tr><th>Domain</th><td>any (x, y) except (0, 0)</td></tr>
+ * </table></p>
  */
 public class Arctangent_2 implements Function {
     @Override

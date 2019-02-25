@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Hyperbolic tangent of x.
+ * Hyperbolic tangent.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>tanh(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class HiperbolicTangent implements Function {
     @Override

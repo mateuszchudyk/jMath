@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Takes two parameters: a, b. Return a to the power b. If |b| < 1 then a in [0, +inf) else a is any real number.
+ * Exponentiation. It takes two parameters and returns a^b.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>pow(a, b)</td></tr>
+ * <tr><th>Domain</th><td>if abs(b) &lt; 1 then a in [0, +inf) else any real
+ *                        number.</td></tr>
+ * </table></p>
  */
 public class Exponentiation implements Function {
     @Override

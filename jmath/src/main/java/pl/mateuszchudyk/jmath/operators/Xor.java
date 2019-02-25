@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Logical XOR. Operands are automatically converted to logical.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x xor y</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * <tr><th>Priority</th><td>8</td></tr>
+ * <tr><th>Associative</th><td>both</td></tr>
+ * </table></p>
+ */
 public class Xor implements Operator {
     @Override
     public String getName() {

@@ -28,7 +28,12 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Natural logarithm of x, x in (0, +inf).
+ * Natural logarithm.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>log(x)</td></tr>
+ * <tr><th>Domain</th><td>any positive number</td></tr>
+ * </table></p>
  */
 public class NaturalLogarithm implements Function {
     @Override

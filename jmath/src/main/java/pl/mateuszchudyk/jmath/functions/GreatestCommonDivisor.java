@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Greates common divisor of the numbers (all in {1, 2, ...}).
+ * Greates common divisor.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>gcd(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>positive integer numbers</td></tr>
+ * </table></p>
  */
 public class GreatestCommonDivisor implements Function {
     @Override

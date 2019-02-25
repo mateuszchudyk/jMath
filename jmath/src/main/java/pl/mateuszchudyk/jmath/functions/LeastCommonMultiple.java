@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Least common multiple of the numbers (all in {1, 2, ...}).
+ * Least common multiple.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>lcm(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>positive integer numbers</td></tr>
+ * </table></p>
  */
 public class LeastCommonMultiple implements Function {
     @Override

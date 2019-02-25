@@ -28,7 +28,13 @@ import java.util.Arrays;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * The larger of the numbers.
+ * Median.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>median(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * </table></p>
  */
 public class Median implements Function {
     @Override

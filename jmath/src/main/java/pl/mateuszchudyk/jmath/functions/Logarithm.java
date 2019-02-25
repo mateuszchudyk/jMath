@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Logarithm of x with base b.
+ * Logarithm.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>log(b, x)</td></tr>
+ * <tr><th>Domain</th><td>b is any positive number except 1, x is any positive
+ *                        number.</td></tr>
+ * </table></p>
  */
 public class Logarithm implements Function {
     @Override

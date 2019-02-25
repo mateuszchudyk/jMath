@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Factorial.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>n!</td></tr>
+ * <tr><th>Domain</th><td>any non-negative integer numbers</td></tr>
+ * <tr><th>Priority</th><td>1</td></tr>
+ * <tr><th>Associative</th><td>left</td></tr>
+ * </table></p>
+ */
 public class Factorial implements Operator {
     @Override
     public String getName() {

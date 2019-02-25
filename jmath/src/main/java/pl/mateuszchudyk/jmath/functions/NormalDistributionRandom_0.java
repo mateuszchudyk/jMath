@@ -28,7 +28,11 @@ import java.util.Random;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Takes two parameters: mean, stddev. Return the random number with a normal distribution (stddev in (0, +inf)).
+ * Random number from standard normal distribution N(0, 1).
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>nrand()</td></tr>
+ * </table></p>
  */
 public class NormalDistributionRandom_0 implements Function {
     private Random random;
@@ -44,7 +48,7 @@ public class NormalDistributionRandom_0 implements Function {
 
     @Override
     public String getDescription() {
-        return "Nrand() = the random number with a standard normal distribution (avg: 0, stddev: 1).";
+        return "Nrand() = the random number from a standard normal distribution (avg: 0, stddev: 1).";
     }
 
     @Override

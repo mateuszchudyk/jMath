@@ -29,7 +29,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Takes two parameters: mean, stddev. Return the random number with a normal distribution (stddev in (0, +inf)).
+ * Random number from normal distribution. It takes two parameters: mean, stddev
+ * and return a random number with a normal distribution N(mean, stddev).
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>nrand(mean, stddev)</td></tr>
+ * <tr><th>Domain</th><td>stddev is any positive number</td></tr>
+ * </table></p>
  */
 public class NormalDistributionRandom_2 implements Function {
     private Random random;
@@ -50,7 +56,6 @@ public class NormalDistributionRandom_2 implements Function {
 
     @Override
     public Double evaluate(Double[] args) throws EvaluationException {
-    // Check domain
         if (args[1] <= 0)
             throw new OutsideDomainException(this, 2, args[1], "(0, +inf)");
         return args[0] + (2*random.nextDouble()-1)*args[1];

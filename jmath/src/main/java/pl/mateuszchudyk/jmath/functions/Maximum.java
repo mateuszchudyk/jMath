@@ -26,6 +26,15 @@ package pl.mateuszchudyk.jmath.functions;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Maximum.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>max(a, ...)</td></tr>
+ * <tr><th>Arguments number</th><td>at least one</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr></p>
+ * </table>
+ */
 public class Maximum implements Function {
     @Override
     public String getName() {

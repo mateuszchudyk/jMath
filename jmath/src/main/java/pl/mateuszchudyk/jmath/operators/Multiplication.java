@@ -26,6 +26,16 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Multiplication.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x * y</td></tr>
+ * <tr><th>Domain</th><td>any numbers</td></tr>
+ * <tr><th>Priority</th><td>4</td></tr>
+ * <tr><th>Associative</th><td>both</td></tr>
+ * </table></p>
+ */
 public class Multiplication implements Operator {
     @Override
     public String getName() {

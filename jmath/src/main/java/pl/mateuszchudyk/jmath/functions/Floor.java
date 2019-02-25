@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Floor. Return the largest integer lower then x.
+ * Floor.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>floor(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Floor implements Function {
     @Override

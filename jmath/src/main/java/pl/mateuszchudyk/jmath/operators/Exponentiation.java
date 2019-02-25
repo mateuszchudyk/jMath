@@ -26,6 +26,17 @@ package pl.mateuszchudyk.jmath.operators;
 
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
+/**
+ * Exponentation.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>x^y</td></tr>
+ * <tr><th>Domain</th><td>if abs(y) &lt; 1 then x in [0, +inf) else any real
+ *                        number.</td></tr>
+ * <tr><th>Priority</th><td>2</td></tr>
+ * <tr><th>Associative</th><td>right</td></tr>
+ * </table></p>
+ */
 public class Exponentiation implements Operator {
     @Override
     public String getName() {

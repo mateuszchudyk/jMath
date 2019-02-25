@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Absolute value of x.
+ * To logical. It takes one argument and returns true if x &gt;= 1, otherwise - false.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>to_logical(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class ToLogical implements Function {
     @Override

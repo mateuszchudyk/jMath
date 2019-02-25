@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Return the nearest integer number x.
+ * Round. It returns the nearest integer number.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>round(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Round implements Function {
     @Override

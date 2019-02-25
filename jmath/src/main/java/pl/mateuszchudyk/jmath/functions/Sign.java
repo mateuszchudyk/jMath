@@ -27,7 +27,12 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Signum. Return the sign of the given number.
+ * Signum.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>sgn(x)</td></tr>
+ * <tr><th>Domain</th><td>any number</td></tr>
+ * </table></p>
  */
 public class Sign implements Function {
     @Override

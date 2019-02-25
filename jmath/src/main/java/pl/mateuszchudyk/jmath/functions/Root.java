@@ -28,7 +28,13 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Takes two parameters: x, n. Return the nth root of x. If n is even then x in [0, +inf) else x is any real number.
+ * Root. It takes two arguments: x, n and returns n-th root of x.
+ *
+ * <p><table>
+ * <tr><th>Signature</th><td>root(x, n)</td></tr>
+ * <tr><th>Domain</th><td>if n is even then x in [0, +inf) otherwise any number
+ *                        </td></tr>
+ * </table></p>
  */
 public class Root implements Function {
     @Override
