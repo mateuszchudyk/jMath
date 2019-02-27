@@ -264,6 +264,7 @@ public final class Parser {
         addFunction(new pl.mateuszchudyk.jmath.functions.Arcsine());
         addFunction(new pl.mateuszchudyk.jmath.functions.Arctangent_1());
         addFunction(new pl.mateuszchudyk.jmath.functions.Arctangent_2());
+        addFunction(new pl.mateuszchudyk.jmath.functions.ArithmeticSequence());
         addFunction(new pl.mateuszchudyk.jmath.functions.BinaryLogarithm());
         addFunction(new pl.mateuszchudyk.jmath.functions.Ceiling());
         addFunction(new pl.mateuszchudyk.jmath.functions.Clamp());
@@ -274,6 +275,7 @@ public final class Parser {
         addFunction(new pl.mateuszchudyk.jmath.functions.Factorial());
         addFunction(new pl.mateuszchudyk.jmath.functions.Fibonacci());
         addFunction(new pl.mateuszchudyk.jmath.functions.Floor());
+        addFunction(new pl.mateuszchudyk.jmath.functions.GeometricSequence());
         addFunction(new pl.mateuszchudyk.jmath.functions.GreatestCommonDivisor());
         addFunction(new pl.mateuszchudyk.jmath.functions.HyperbolicCosine());
         addFunction(new pl.mateuszchudyk.jmath.functions.HyperbolicSine());
