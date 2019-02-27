@@ -28,11 +28,11 @@ Library contains set of built-in:
     - trigonometric: `sin`, `cos`, `tan`, `asin`, `acos`, `atan`, `atan2`, `sinh`, `cosh`, `tanh`,
     - statistical: `min`, `max`, `mean`, `stddev`, `median`,
     - random: `rand` (uniform), `nrand` (normal),
-    - conversion: `to_degrees`, `to_radians`, `to_logical`
-    - compound: `gcd`, `lcm`, `factorial`, `fib`, `lagrange`, `poly`
+    - conversion: `to_degrees`, `to_radians`, `to_logical`,
+    - compound: `gcd`, `lcm`, `factorial`, `fib`, `lagrange`, `poly`,
   - Optimization passes:
-    - BinaryOperatorSimplifying
-    - ConstantFolding
+    - BinaryOperatorSimplifying,
+    - ConstantFolding,
 
 ## Built-in operators
 
