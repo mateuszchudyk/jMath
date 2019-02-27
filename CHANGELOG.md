@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.0.0 (2019-02-27)
+## [1.0.0] (2019-02-27)
 
 **jMath** is a mathematical library to evaluate complicated expression written as a `string`. Main features:
   - Expressions are stored as `Abstract Syntax Tree` so the expression can be evaluated many times without re-parsing.
@@ -30,3 +30,7 @@ Library contains set of built-in:
   - Optimization passes:
     - BinaryOperatorSimplifying,
     - ConstantFolding,
+
+
+
+[1.0.0]: https://github.com/mateuszchudyk/jmath/commit/cc62f87a0eab75c3c36e8891e9e580c053d43aff
