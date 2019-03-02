@@ -34,6 +34,32 @@ Library contains set of built-in:
     - BinaryOperatorSimplifying,
     - ConstantFolding,
 
+More details about **jMath**'s classes and built-in constants, operators, functions and optimization passes can be found in Javadoc.
+
+There are several examples in `./examples` directory.
+
+## How to build / run
+
+Build **jMath** library:
+```
+gradle :jmath:build
+```
+Build Javadoc:
+```
+gradle javadoc
+```
+Build examples:
+```
+gradle :examples:build
+```
+
+All artifacts are placed in `./output` directory.
+
+Run example:
+```
+java -jar output/${example_name}.jar
+```
+
 ## Built-in operators
 
 | Symbol | Description | Priority | Position | Associative |
