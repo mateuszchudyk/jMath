@@ -2,3 +2,6 @@ rootProject.name = "jmath"
 
 include "jmath"
 include "examples"
+include "calculator"
+
+project(":calculator").name = "Calculator"

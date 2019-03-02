@@ -1,0 +1,22 @@
+group "pl.mateuszchudyk.jmath"
+
+dependencies {
+    compile project(":jmath")
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "${project.group}.calculator.Calculator"
+        attributes "Class-Path": "jmath-1.0.0.jar"
+    }
+}
+
+task copyArtifacts(type: Copy) {
+    dependsOn(":jmath:copyLibraryToOutputDir")
+
+    from "${project.buildDir}/libs/"
+    include "*"
+    into "${project.rootProject.projectDir}/output"
+}
+
+build.finalizedBy(copyArtifacts)

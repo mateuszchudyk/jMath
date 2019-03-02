@@ -36,7 +36,9 @@ Library contains set of built-in:
 
 More details about **jMath**'s classes and built-in constants, operators, functions and optimization passes can be found in Javadoc.
 
-There are several examples in `./examples` directory.
+In addition, repository contains:
+- Several examples in `./examples` directory,
+- Calculator application,
 
 ## How to build / run
 
@@ -52,12 +54,16 @@ Build examples:
 ```
 gradle :examples:build
 ```
+Build calculator:
+```
+gradle :calculator:build
+```
 
 All artifacts are placed in `./output` directory.
 
-Run example:
+Run example/calculator:
 ```
-java -jar output/${example_name}.jar
+java -jar output/${jar_file}
 ```
 
 ## Built-in operators
