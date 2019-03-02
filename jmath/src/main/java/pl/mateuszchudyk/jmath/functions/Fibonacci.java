@@ -28,8 +28,8 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Fibonnaci. It takes one argument and returns n-th element of Fibonacci's
- * sequence (starting from F_0 = 0, F_1 = 1).
+ * Fibonnaci's sequence. It takes one argument and returns n-th element of
+ * Fibonacci's sequence (starting from F_0 = 0, F_1 = 1).
  *
  * <p><table>
  * <tr><th>Signature</th><td>fib(n)</td></tr>

@@ -27,7 +27,7 @@ package pl.mateuszchudyk.jmath.operators;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Creater then or equal.
+ * Greater then or equal.
  *
  * <p><table>
  * <tr><th>Signature</th><td>x &gt;= y</td></tr>

@@ -27,7 +27,7 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Indicator. It thaes three argumets: x, a, b and return if a &lt;= x &lt;= b.
+ * Indicator. It takes three arguments: x, a, b and returns if a &lt;= x &lt;= b.
  *
  * <p><table>
  * <tr><th>Signature</th><td>indicator(x, a, b)</td></tr>

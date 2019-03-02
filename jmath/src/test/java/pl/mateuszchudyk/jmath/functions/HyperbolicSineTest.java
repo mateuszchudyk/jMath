@@ -24,34 +24,14 @@
 
 package pl.mateuszchudyk.jmath.functions;
 
-import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
-
 /**
- * Hyperbolic sine.
- *
- * <p><table>
- * <tr><th>Signature</th><td>sinh(x)</td></tr>
- * <tr><th>Domain</th><td>any number</td></tr>
- * </table></p>
+ * @author Mateusz Chudyk
  */
-public class HiperbolicSine implements Function {
+public class HyperbolicSineTest extends FunctionTest {
     @Override
-    public String getName() {
-        return "sinh";
-    }
-
-    @Override
-    public String getDescription() {
-        return "Sinh(x) = hyperbolic sine of x.";
-    }
-
-    @Override
-    public Double evaluate(Double[] args) throws EvaluationException {
-        return Math.sinh(args[0]);
-    }
-
-    @Override
-    public boolean checkNumberOfArguments(int numberOfArguments) {
-        return numberOfArguments == 1;
+    public void evaluateTest() {
+        evaluateCheck(/* expected = */ -1.1752011936438014, /* inputs = */ -1.0);
+        evaluateCheck(/* expected = */ 0.0, /* inputs = */ 0.0);
+        evaluateCheck(/* expected = */ 1.1752011936438014, /* inputs = */ 1.0);
     }
 }

@@ -34,7 +34,7 @@ import pl.mateuszchudyk.jmath.optimizations.OptimizationPass;
 /**
  * Optimizer class.
  *
- * <p>Optimizer class is responsible for optimziation an expression in
+ * <p>Optimizer class is responsible for optimization an expression in
  * <i>Abstract Syntax Tree</i> form. It can apply only one optimization pass on
  * the expression or all added optimization passes until no one of them modify
  * the expression.</p>

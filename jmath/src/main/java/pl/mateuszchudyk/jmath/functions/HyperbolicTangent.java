@@ -34,7 +34,7 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
  * <tr><th>Domain</th><td>any number</td></tr>
  * </table></p>
  */
-public class HiperbolicTangent implements Function {
+public class HyperbolicTangent implements Function {
     @Override
     public String getName() {
         return "tanh";

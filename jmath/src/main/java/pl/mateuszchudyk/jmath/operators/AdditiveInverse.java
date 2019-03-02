@@ -27,7 +27,7 @@ package pl.mateuszchudyk.jmath.operators;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * AdditiveInverse.
+ * Additive inverse.
  *
  * <p><table>
  * <tr><th>Signature</th><td>-x</td></tr>

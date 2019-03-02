@@ -34,7 +34,7 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
  * <tr><th>Domain</th><td>any number</td></tr>
  * </table></p>
  */
-public class HiperbolicCosine implements Function {
+public class HyperbolicCosine implements Function {
     @Override
     public String getName() {
         return "cosh";

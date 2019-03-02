@@ -275,9 +275,9 @@ public final class Parser {
         addFunction(new pl.mateuszchudyk.jmath.functions.Fibonacci());
         addFunction(new pl.mateuszchudyk.jmath.functions.Floor());
         addFunction(new pl.mateuszchudyk.jmath.functions.GreatestCommonDivisor());
-        addFunction(new pl.mateuszchudyk.jmath.functions.HiperbolicCosine());
-        addFunction(new pl.mateuszchudyk.jmath.functions.HiperbolicSine());
-        addFunction(new pl.mateuszchudyk.jmath.functions.HiperbolicTangent());
+        addFunction(new pl.mateuszchudyk.jmath.functions.HyperbolicCosine());
+        addFunction(new pl.mateuszchudyk.jmath.functions.HyperbolicSine());
+        addFunction(new pl.mateuszchudyk.jmath.functions.HyperbolicTangent());
         addFunction(new pl.mateuszchudyk.jmath.functions.Indicator());
         addFunction(new pl.mateuszchudyk.jmath.functions.LagrangePolynomial());
         addFunction(new pl.mateuszchudyk.jmath.functions.LeastCommonMultiple());
@@ -573,7 +573,7 @@ public final class Parser {
      * </p>
      *
      * @param expression Expression written as a string.
-     * @return Exression object.
+     * @return Expression object.
      * @throws ParseException
      */
     public Expression parse(String expression) throws ParseException {
@@ -752,7 +752,7 @@ public final class Parser {
     private ASTExpression createAST(List<Token> tokens) throws ParseException {
         Stack<Operator> O = new Stack<>();              // operators
         Queue<ASTExpression> R = new LinkedList<>();    // result
-        Stack<Integer> P = new Stack<>();               // paranthesis
+        Stack<Integer> P = new Stack<>();               // parentheses
 
         for (int i = 0; i < tokens.size(); i++) {
             Token currentToken = tokens.get(i);

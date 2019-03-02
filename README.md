@@ -107,7 +107,7 @@ Library contains set of built-in:
 | Name | Description |
 |---|---|
 | BinaryOperatorSimplifying | Simplify a binary operator if it's possible, e.g.: `x + 0 = x` or `x^1 = x`|
-| ConstantFolding | Fold `AST` subtree to constant if it contains only constans |
+| ConstantFolding | Fold `AST` subtree to constant if it contains only constants |
 
 ## License
 

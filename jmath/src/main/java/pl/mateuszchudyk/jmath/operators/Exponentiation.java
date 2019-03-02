@@ -27,7 +27,7 @@ package pl.mateuszchudyk.jmath.operators;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Exponentation.
+ * Exponentiation.
  *
  * <p><table>
  * <tr><th>Signature</th><td>x^y</td></tr>

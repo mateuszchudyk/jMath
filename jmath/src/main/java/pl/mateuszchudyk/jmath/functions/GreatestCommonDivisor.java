@@ -28,7 +28,7 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Greates common divisor.
+ * Greatest common divisor.
  *
  * <p><table>
  * <tr><th>Signature</th><td>gcd(a, ...)</td></tr>

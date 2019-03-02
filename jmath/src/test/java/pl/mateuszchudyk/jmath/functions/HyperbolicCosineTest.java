@@ -27,11 +27,11 @@ package pl.mateuszchudyk.jmath.functions;
 /**
  * @author Mateusz Chudyk
  */
-public class HiperbolicTangentTest extends FunctionTest {
+public class HyperbolicCosineTest extends FunctionTest {
     @Override
     public void evaluateTest() {
-        evaluateCheck(/* expected = */ -0.7615941559557649, /* inputs = */ -1.0);
-        evaluateCheck(/* expected = */ 0.0, /* inputs = */ 0.0);
-        evaluateCheck(/* expected = */ 0.7615941559557649, /* inputs = */ 1.0);;
+        evaluateCheck(/* expected = */ 1.543080634815244, /* inputs = */ -1.0);
+        evaluateCheck(/* expected = */ 1.0, /* inputs = */ 0.0);
+        evaluateCheck(/* expected = */ 1.543080634815244, /* inputs = */ 1.0);
     }
 }

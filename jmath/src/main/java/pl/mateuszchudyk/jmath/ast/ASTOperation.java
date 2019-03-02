@@ -98,7 +98,7 @@ public class ASTOperation implements ASTExpression {
     /**
      * Get operation's i-th argument as <i>Abstract Syntax Tree</i>.
      *
-     * @result i-th arguemnt as <i>Abstract Syntax Tree</i>.
+     * @result i-th argument as <i>Abstract Syntax Tree</i>.
      */
     public ASTExpression getArgument(int i) {
         if (arguments == null || i < 0 || i >= arguments.length)

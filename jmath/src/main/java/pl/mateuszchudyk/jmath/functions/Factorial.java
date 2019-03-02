@@ -29,7 +29,7 @@ import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 
 /**
- * Factorial. It takes one argument and return n!.
+ * Factorial. It takes one argument and returns n!.
  *
  * <p><table>
  * <tr><th>Signature</th><td>factorial(n)</td></tr>

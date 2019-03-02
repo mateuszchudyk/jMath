@@ -32,7 +32,7 @@ import pl.mateuszchudyk.jmath.exceptions.ParseException;
 
 public class BasicExample {
     public static void main(String[] args) {
-        // Create default parser i.e.: contating all built-in constants,
+        // Create default parser i.e.: containing all built-in constants,
         // functions and operators.
         Parser parser = new Parser(ParserType.Default);
 

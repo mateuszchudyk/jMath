@@ -33,7 +33,7 @@ import pl.mateuszchudyk.jmath.exceptions.OutsideDomainException;
 import pl.mateuszchudyk.jmath.functions.Function;
 
 class IsEven implements Function {
-    // Indentificator of the function. Keep in mind that parser is case
+    // Identifier of the function. Keep in mind that parser is case
     // insensitive.
     @Override
     public String getName() {
@@ -46,7 +46,7 @@ class IsEven implements Function {
         return "isEven(x) = return 1 if even, otherwise 0";
     }
 
-    // Evalutation of the function.
+    // Evaluation of the function.
     @Override
     public Double evaluate(Double[] args) throws EvaluationException {
         int value = (int)Math.floor(args[0]);

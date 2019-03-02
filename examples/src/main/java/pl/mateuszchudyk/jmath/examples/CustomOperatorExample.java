@@ -34,7 +34,7 @@ import pl.mateuszchudyk.jmath.operators.Operator;
 import pl.mateuszchudyk.jmath.operators.OperatorType;
 
 class PlusOne implements Operator {
-    // Indentificator of the function. Keep in mind that parser is case
+    // Identifier of the function. Keep in mind that parser is case
     // insensitive.
     @Override
     public String getName() {
@@ -47,7 +47,7 @@ class PlusOne implements Operator {
         return "Increase value by 1.";
     }
 
-    // Evalutation of the operator.
+    // Evaluation of the operator.
     @Override
     public Double evaluate(Double[] args) throws EvaluationException {
         return args[0] + 1;
@@ -68,7 +68,7 @@ class PlusOne implements Operator {
         return OperatorType.Right;
     }
 
-    // Assiociative: Left/Right/Both
+    // Associative: Left/Right/Both
     @Override
     public AssociativeType getAssociativeType() {
         return AssociativeType.Both;
@@ -79,7 +79,7 @@ public class CustomOperatorExample {
     public static void main(String[] args) {
         Parser parser = new Parser(ParserType.Default);
 
-        // Notify the parser that "IsEven" is a valid operator.
+        // Notify the parser that "PlusOne" is a valid operator.
         parser.addOperator(new PlusOne());
 
         try {

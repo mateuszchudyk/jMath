@@ -27,9 +27,9 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Lagrange polynomial. It evaluate Lagrange polynomial interpolation in the
+ * Lagrange polynomial. It evaluates Lagrange polynomial interpolation in the
  * given point. First argument is point in which polynomial is evaluated,
- * the rest of arguemnts is a list of points.
+ * the rest of arguments is a list of points.
  *
  * <p><table>
  * <tr><th>Signature</th><td>lagrange(x, x1, y1, ...)</td></tr>

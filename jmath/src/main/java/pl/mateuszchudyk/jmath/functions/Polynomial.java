@@ -27,7 +27,7 @@ package pl.mateuszchudyk.jmath.functions;
 import pl.mateuszchudyk.jmath.exceptions.EvaluationException;
 
 /**
- * Polynomial. It evaluate polynomial: a0 + a1 * x + a2 * x^2 + ... + an * x^n.
+ * Polynomial. It evaluates polynomial: a0 + a1 * x + a2 * x^2 + ... + an * x^n.
  *
  * <p><table>
  * <tr><th>Signature</th><td>poly(x, a0, a1, ...)</td></tr>
