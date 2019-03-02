@@ -13,9 +13,17 @@ dependencies {
     testCompile "junit:junit:4.12"
 }
 
-task copyArtifacts(type: Copy, dependsOn: rootProject.createOutputDir) {
+task copyLibraryToOutputDir(type: Copy) {
     from "${project.projectDir}/build/libs/${project.name}-${version}.jar"
     into "${project.rootProject.projectDir}/output"
 }
 
-build.finalizedBy(copyArtifacts)
+build.finalizedBy(copyLibraryToOutputDir)
+
+task copyJavadocToOutputDir(type: Copy) {
+    from "${project.projectDir}/build/docs"
+    include "javadoc/**"
+    into "${project.rootProject.projectDir}/output"
+}
+
+javadoc.finalizedBy(copyJavadocToOutputDir)

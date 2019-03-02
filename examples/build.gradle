@@ -35,10 +35,15 @@ build {
     }
 }
 
-task copyArtifacts(type: Copy, dependsOn: rootProject.createOutputDir) {
-    from "${project.buildDir}/libs/"
-    include "*Example.jar" // TODO: change to "*.jar" but first disable building examples.jar
-    into "${project.rootProject.projectDir}/output"
+task copyExamplesToOutputDir(type: Copy) {
+    dependsOn(":jmath:copyLibraryToOutputDir")
+
+    from("${project.buildDir}/libs/") {
+        getExamplesList().each { name ->
+            include "${name}.jar"
+        }
+    }
+    into "${project.rootProject.projectDir}/output/"
 }
 
-build.finalizedBy(copyArtifacts)
+build.finalizedBy(copyExamplesToOutputDir)

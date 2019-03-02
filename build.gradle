@@ -7,10 +7,6 @@ subprojects {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-task createOutputDir {
-    mkdir "${project.projectDir}/output"
-}
-
 task deleteOutputDir {
     delete "${project.projectDir}/output"
 }
